@@ -48,7 +48,7 @@ export const gasTypes: GasType[] = [
     type: "LPG",
     size: "Large",
     weight: "25kg",
-    price: 11000,
+    price: 9500,
     description:
       "Large capacity Liquefied Petroleum Gas cylinder for industrial use or large households. Excellent value for high-volume users.",
     image: gas3,
