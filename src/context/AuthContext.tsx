@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 const MOCK_USERS = [
   {
     id: 'user-1',
-    name: 'John K',
+    name: 'John Kamau',
     email: 'john@student.ku.ac.ke',
     phone: '+254712345678',
     password: 'password123',
@@ -12,7 +12,7 @@ const MOCK_USERS = [
   },
   {
     id: 'admin-1',
-    name: 'Mary W',
+    name: 'Mary Wanjiku',
     email: 'mary@admin.ku.ac.ke',
     phone: '+254723456789',
     password: 'admin123',

@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Flame, Info, AlertCircle } from "lucide-react";
-import { GasType } from "../../types/GasType";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Flame, Info, AlertCircle } from 'lucide-react';
+import { GasType } from '../../types/GasType';
 
 interface GasCylinderCardProps {
   gasType: GasType;
@@ -11,8 +11,8 @@ const GasCylinderCard: React.FC<GasCylinderCardProps> = ({ gasType }) => {
   return (
     <div className="card h-full flex flex-col">
       <div className="relative h-48 overflow-hidden">
-        <img
-          src={gasType.image}
+        <img 
+          src={gasType.image} 
           alt={gasType.name}
           className="w-full h-full object-cover transition-transform hover:scale-105"
         />
@@ -25,17 +25,13 @@ const GasCylinderCard: React.FC<GasCylinderCardProps> = ({ gasType }) => {
           {gasType.weight}
         </div>
       </div>
-
+      
       <div className="p-4 flex-grow flex flex-col">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="text-lg font-semibold text-gray-800">
-            {gasType.name}
-          </h3>
-          <span className="text-lg font-bold text-amber-600">
-            KES {gasType.price.toLocaleString()}
-          </span>
+          <h3 className="text-lg font-semibold text-gray-800">{gasType.name}</h3>
+          <span className="text-lg font-bold text-amber-600">KES {gasType.price.toLocaleString()}</span>
         </div>
-
+        
         <div className="mb-2 flex items-center">
           <span className="text-sm bg-gray-100 rounded-full px-2 py-1 mr-2">
             {gasType.type}
@@ -44,14 +40,14 @@ const GasCylinderCard: React.FC<GasCylinderCardProps> = ({ gasType }) => {
             {gasType.size}
           </span>
         </div>
-
+        
         <p className="text-gray-600 text-sm mb-4 flex-grow">
           {gasType.description}
         </p>
-
+        
         <div className="mt-auto">
           {gasType.inStock ? (
-            <Link
+            <Link 
               to={`/request-refill/${gasType.id}`}
               className="btn btn-primary w-full mb-2"
             >
@@ -59,16 +55,13 @@ const GasCylinderCard: React.FC<GasCylinderCardProps> = ({ gasType }) => {
               Request Refill
             </Link>
           ) : (
-            <button
-              className="btn bg-gray-300 text-gray-600 cursor-not-allowed w-full mb-2"
-              disabled
-            >
+            <button className="btn bg-gray-300 text-gray-600 cursor-not-allowed w-full mb-2" disabled>
               <AlertCircle className="h-4 w-4 mr-2" />
               Out of Stock
             </button>
           )}
-
-          <Link
+          
+          <Link 
             to={`/gas-cylinders/${gasType.id}`}
             className="btn btn-outline w-full text-sm"
           >

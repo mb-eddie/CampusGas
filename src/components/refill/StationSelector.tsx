@@ -1,13 +1,6 @@
-import React from "react";
-import {
-  MapPin,
-  Star,
-  Clock,
-  CreditCard,
-  CheckCircle,
-  XCircle,
-} from "lucide-react";
-import { Station } from "../../data/stations";
+import React from 'react';
+import { MapPin, Star, Clock, CreditCard, CheckCircle, XCircle } from 'lucide-react';
+import { Station } from '../../data/stations';
 
 interface StationSelectorProps {
   stations: Station[];
@@ -15,26 +8,26 @@ interface StationSelectorProps {
   onSelectStation: (stationId: string) => void;
 }
 
-const StationSelector: React.FC<StationSelectorProps> = ({
-  stations,
-  selectedStationId,
-  onSelectStation,
+const StationSelector: React.FC<StationSelectorProps> = ({ 
+  stations, 
+  selectedStationId, 
+  onSelectStation 
 }) => {
   return (
     <div className="space-y-4">
       <h3 className="text-lg font-semibold">Select a Gas Station</h3>
-
-      {stations.map((station) => {
+      
+      {stations.map(station => {
         const isSelected = selectedStationId === station.id;
-
+        
         return (
-          <div
+          <div 
             key={station.id}
             className={`border rounded-lg overflow-hidden transition-all ${
-              isSelected
-                ? "border-teal-500 shadow-md"
-                : "border-gray-200 hover:border-gray-300"
-            } ${!station.isOpen && "opacity-75"}`}
+              isSelected 
+                ? 'border-teal-500 shadow-md' 
+                : 'border-gray-200 hover:border-gray-300'
+            } ${!station.isOpen && 'opacity-75'}`}
           >
             <button
               type="button"
@@ -50,20 +43,16 @@ const StationSelector: React.FC<StationSelectorProps> = ({
                       <h4 className="font-semibold">{station.name}</h4>
                       <div className="flex items-center text-gray-500 text-sm mt-1">
                         <MapPin className="h-4 w-4 mr-1" />
-                        <span>
-                          {station.location} ({station.distance} km)
-                        </span>
+                        <span>{station.location} ({station.distance} km)</span>
                       </div>
                     </div>
-
+                    
                     <div className="flex items-center mt-1">
                       <Star className="h-4 w-4 text-amber-500 mr-1" />
-                      <span className="font-semibold">
-                        {station.rating.toFixed(1)}
-                      </span>
+                      <span className="font-semibold">{station.rating.toFixed(1)}</span>
                     </div>
                   </div>
-
+                  
                   <div className="mt-2 grid grid-cols-2 gap-2">
                     <div className="flex items-center text-gray-600 text-sm">
                       <Clock className="h-4 w-4 mr-1" />
@@ -71,13 +60,11 @@ const StationSelector: React.FC<StationSelectorProps> = ({
                     </div>
                     <div className="flex items-center text-gray-600 text-sm">
                       <CreditCard className="h-4 w-4 mr-1" />
-                      <span>
-                        KES {station.deliveryFee.toLocaleString()} delivery
-                      </span>
+                      <span>KES {station.deliveryFee.toLocaleString()} delivery</span>
                     </div>
                   </div>
                 </div>
-
+                
                 {/* Status */}
                 <div className="flex items-center justify-end">
                   {station.isOpen ? (
