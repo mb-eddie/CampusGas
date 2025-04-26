@@ -1,7 +1,7 @@
 import station1 from '../assets/images/station-1.jpg';
 import station2 from '../assets/images/station-2.jpg';
 import station3 from '../assets/images/station-3.jpg';
-import station4 from '../assets/images/station-4.jpg';
+import station4 from '../assets/images/station-1.jpg';
 import station5 from '../assets/images/station-5.jpg';
 
 export interface Station {
@@ -27,7 +27,7 @@ export const stations: Station[] = [
     deliveryFee: 60,
     estimatedDeliveryTime: '15-20',
     isOpen: true,
-    phone: '+256 700 123 456',
+    phone: '+254 700 123 456',
     image: station1
   },
   {
@@ -39,7 +39,7 @@ export const stations: Station[] = [
     deliveryFee: 60,
     estimatedDeliveryTime: '20-30',
     isOpen: true,
-    phone: '+256 701 234 567',
+    phone: '+254 701 234 567',
     image: station2
   },
   {
@@ -51,7 +51,7 @@ export const stations: Station[] = [
     deliveryFee: 60,
     estimatedDeliveryTime: '10-15',
     isOpen: true,
-    phone: '+256 702 345 678',
+    phone: '+254 702 345 678',
     image: station3
   },
   {
@@ -63,7 +63,7 @@ export const stations: Station[] = [
     deliveryFee: 60,
     estimatedDeliveryTime: '25-40',
     isOpen: true,
-    phone: '+256 703 456 789',
+    phone: '+254 703 456 789',
     image: station4
   },
   {
@@ -75,7 +75,7 @@ export const stations: Station[] = [
     deliveryFee: 60,
     estimatedDeliveryTime: '35-50',
     isOpen: false,
-    phone: '+256 704 567 890',
+    phone: '+254 704 567 890',
     image: station5
   }
 ];
