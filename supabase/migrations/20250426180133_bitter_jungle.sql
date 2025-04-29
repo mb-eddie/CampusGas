@@ -99,7 +99,7 @@ CREATE POLICY "Admins can update orders"
 INSERT INTO auth.users (id, email, encrypted_password, email_confirmed_at)
 VALUES
   ('11111111-1111-1111-1111-111111111111', 'john@student.ku.ac.ke', crypt('password123', gen_salt('bf')), now()),
-  ('22222222-2222-2222-2222-222222222222', 'mary@admin.ku.ac.ke', crypt('admin123', gen_salt('bf')), now()),
+  ('22222222-2222-2222-2222-222222222222', 'melvin@admin.mksu.ac.ke', crypt('admin123', gen_salt('bf')), now()),
   ('33333333-3333-3333-3333-333333333333', 'peter@student.ku.ac.ke', crypt('password123', gen_salt('bf')), now()),
   ('44444444-4444-4444-4444-444444444444', 'sarah@student.ku.ac.ke', crypt('password123', gen_salt('bf')), now()),
   ('55555555-5555-5555-5555-555555555555', 'james@student.ku.ac.ke', crypt('password123', gen_salt('bf')), now()),
@@ -111,8 +111,8 @@ VALUES
 -- Insert profiles for users
 INSERT INTO profiles (id, name, phone, is_admin)
 VALUES
-  ('11111111-1111-1111-1111-111111111111', 'John Kamau', '+254712345678', false),
-  ('22222222-2222-2222-2222-222222222222', 'Mary Wanjiku', '+254723456789', true),
+  ('11111111-1111-1111-1111-111111111111', 'John K', '+254712345678', false),
+  ('22222222-2222-2222-2222-222222222222', 'Melvi M ', '+254723456789', true),
   ('33333333-3333-3333-3333-333333333333', 'Peter Omondi', '+254734567890', false),
   ('44444444-4444-4444-4444-444444444444', 'Sarah Njeri', '+254745678901', false),
   ('55555555-5555-5555-5555-555555555555', 'James Kiprop', '+254756789012', false),
