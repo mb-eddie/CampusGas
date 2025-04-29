@@ -13,7 +13,7 @@ const MOCK_USERS = [
   {
     id: 'admin-1',
     name: 'Melvin M',
-    email: 'melvin@admin.ku.ac.ke',
+    email: 'melvin@admin.mksu.ac.ke',
     phone: '+254723456789',
     password: 'admin123',
     isAdmin: true
